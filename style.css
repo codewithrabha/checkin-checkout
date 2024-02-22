@@ -4,30 +4,31 @@
     box-sizing: border-box;
 }
 
-input[type="date"]::-webkit-inner-spin-button,
+
 input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
     -webkit-appearance: none;
 }
 
-    article {
-        width: 49%;
-        min-height: 100px;
-        padding: 10px 15px;
-        border-radius: 5px;
-        border: 1px solid rgb(255, 194, 194);
-        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-        font-size: 16px;
-        font-family: "Open Sans", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 400;
-        color: rgb(116, 118, 120);
-    }
+article {
+    width: 49%;
+    min-height: 100px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 194, 194);
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    color: rgb(116, 118, 120);
+}
 
 fieldset {
     display: flex;
+    width: 480px;
+    flex-wrap: wrap;
     gap: 10px;
-    flex-direction: column;
     padding: 10px 20px;
     border: 2px solid rgb(222, 222, 222);
     border-radius: 5px;
@@ -51,8 +52,10 @@ main {
         gap: 40px;
         flex-wrap: wrap;
 
+        label{width: 100%;}
+
         input {
-            width: 218px;
+            flex-grow: 1;
             padding: 7px 10px;
             border-radius: 5px;
             border: 1.5px solid rgb(182, 182, 182);
@@ -68,7 +71,25 @@ main {
             }
         }
 
-        button {
+        #check_in_btn, #check_out_btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 10%;
+            cursor: pointer;
+            border-radius: 5px;
+            border: 1px solid rgb(141, 129, 129);
+            font-family: "Open Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+
+            img{
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        #submit{
             width: 150px;
             cursor: pointer;
             border-radius: 5px;
@@ -96,17 +117,23 @@ main {
         color: rgb(116, 118, 120);
     }
 
+    fieldset{width: auto;}
+
     form {
         width: 80%;
         flex-direction: column;
-
-        input{
-            width: 100% !important;
+        
+        #check_in_btn, #check_out_btn {
+            padding: 10px 15px;
+            width: 15% !important;
         }
 
-        button {
-            padding: 10px 15px;
+        #submit{
             width: 100% !important;
+            padding: 10px 15px;
         }
     }
+
+
+
 }
