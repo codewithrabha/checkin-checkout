@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check In Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <article>
+            A HTML 5 checkIn / checkOut reservation form with few extra logic added. CheckIn date picker only allow
+            current and future date. The checkOut date is forced to be greater than checkIn date.
+        </article>
+        <form action="#">
+            <fieldset>
+                <label for="check_in">Check In</label>
+                <input type="date" name="checkin" id="check_in" placeholder="DD-MM-YY">
+                <button id="check_in_btn" type="button"><img src="calender.png" alt="calender"></i></button>
+            </fieldset>
+            <fieldset>
+                <label for="check_out">Check Out</label>
+                <input type="date" name="checkin" id="check_out" placeholder="DD-MM-YY">
+                <button id="check_out_btn" type="button"><img src="calender.png" alt="calender"></i></button>
+            </fieldset>
+            <button id="submit" type="button">BOOK NOW</button>
+        </form>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
