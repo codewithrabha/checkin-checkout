@@ -65,7 +65,7 @@ main {
         width: 30vw;
         padding: 25px 30px;
         background: white;
-        box-shadow: rgba(122, 122, 122, 0.15) 0px 20px 50px 0px;
+        box-shadow: rgba(122, 122, 122, 0.15) 0px 20px 100px 0px;
 
         label {
             width: 100%;
