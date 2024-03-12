@@ -13,8 +13,8 @@ const showPickerTrigger = (input) => {
 }
 
 const removeDesabled = () => {
-    checkOutInput.removeAttribute('disabled')
-    checkOutBtn.removeAttribute('disabled')
+  checkOutInput.removeAttribute('disabled')
+  checkOutBtn.removeAttribute('disabled')
 }
 
 
