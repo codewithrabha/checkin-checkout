@@ -2,6 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    &[disabled] {
+        cursor: not-allowed;
+        border: none;
+        opacity: 0.5;
+    }
 }
 
 
@@ -11,12 +17,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 article {
-    width: 49%;
+    width: 30vw;
     min-height: 100px;
     padding: 10px 15px;
     border-radius: 5px;
     border: 1px solid rgb(255, 194, 194);
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    /* box-shadow: rgba(122, 122, 122, 0.15) 0px 20px 50px 0px; */
     font-size: 16px;
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
@@ -27,10 +33,11 @@ article {
 fieldset {
     display: flex;
     width: 480px;
+    max-width: 100%;
     flex-wrap: wrap;
     gap: 10px;
-    padding: 10px 20px;
-    border: 2px solid rgb(222, 222, 222);
+    padding: 10px 20px 15px 20px;
+    border: 1px solid rgb(222, 222, 222);
     border-radius: 5px;
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
@@ -46,17 +53,27 @@ main {
     width: 100%;
     height: 100vh;
     padding-top: 10vh;
+    background: rgb(255, 255, 255);
 
     form {
         display: flex;
+        flex-direction: column;
         gap: 40px;
         flex-wrap: wrap;
+        border: 0 solid rgb(225, 225, 225);
+        border-radius: 5px;
+        width: 30vw;
+        padding: 25px 30px;
+        background: white;
+        box-shadow: rgba(122, 122, 122, 0.15) 0px 20px 50px 0px;
 
-        label{width: 100%;}
+        label {
+            width: 100%;
+        }
 
         input {
             flex-grow: 1;
-            padding: 7px 10px;
+            padding: 5px 10px;
             border-radius: 5px;
             border: 1.5px solid rgb(182, 182, 182);
             font-family: "Open Sans", sans-serif;
@@ -71,26 +88,28 @@ main {
             }
         }
 
-        #check_in_btn, #check_out_btn {
+        button {
             display: flex;
             justify-content: center;
             align-items: center;
             width: 10%;
             cursor: pointer;
             border-radius: 5px;
-            border: 1px solid rgb(141, 129, 129);
+            border: none;
+            background-color: transparent;
             font-family: "Open Sans", sans-serif;
             font-optical-sizing: auto;
             font-weight: 600;
 
-            img{
-                width: 24px;
-                height: 24px;
+            img {
+                width: 100%;
             }
+
         }
 
-        #submit{
-            width: 150px;
+        #submit {
+            width: 100%;
+            padding: 7px 0;
             cursor: pointer;
             border-radius: 5px;
             border: 1px solid rgb(141, 129, 129);
@@ -102,10 +121,9 @@ main {
 }
 
 
-
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 480px) {
     article {
-        width: 80%;
+        width: 90vw;
         padding: 10px 15px;
         border-radius: 5px;
         border: 1px solid rgb(255, 194, 194);
@@ -117,21 +135,29 @@ main {
         color: rgb(116, 118, 120);
     }
 
-    fieldset{width: auto;}
+    fieldset {
+        width: auto;
+    }
 
-    form {
-        width: 80%;
-        flex-direction: column;
-        
-        #check_in_btn, #check_out_btn {
-            padding: 10px 15px;
-            width: 15% !important;
+    main {
+        padding: 30px 0 0;
+        form {
+            width: 90vw;
+            flex-direction: column;
+
+            button {
+                width: 15%;
+                img{
+                    width: 100%;
+                }
+            }
+
+            #submit {
+                width: 100% !important;
+                padding: 10px 15px;
+            }
         }
 
-        #submit{
-            width: 100% !important;
-            padding: 10px 15px;
-        }
     }
 
 
